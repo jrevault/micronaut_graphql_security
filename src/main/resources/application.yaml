@@ -1,0 +1,22 @@
+micronaut:
+  security:
+    enabled: true
+    token:
+      name-key: "user_email"
+      jwt:
+        enabled: true
+        signatures:
+          secret:
+            generator:
+              secret: "test"
+              base64: false
+              jws-algorithm: HS512
+    intercept-url-map:
+      - pattern: /ping
+        access:
+          - isAnonymous()
+      - pattern: /secret
+        access:
+          - isAuthenticated()
+
+
