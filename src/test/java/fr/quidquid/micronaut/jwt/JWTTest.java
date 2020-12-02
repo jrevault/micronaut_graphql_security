@@ -12,8 +12,8 @@ class JWTTest {
   @Test
   public void test_signature_base_64() {
 
-    String token = "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMzUxMjM1MTM0NTQxMyIsImlzcyI6IkRETSIsImV4cCI6MTcwNjgzNzI5OCwiaWF0IjoxNjA2ODM2Mzk4LCJ1c2VyX2lkIjo4MDAsInJvbGVzIjpbIkFETUlOIl0sInVzZXJfZmlyc3RfbmFtZSI6IkFkIiwidXNlcl9sYXN0X25hbWUiOiJNaW4iLCJ1c2VyX2VtYWlsIjoiYWRtaW5Ad2hhdGV2ZXIuY29tIn0.2Ucx1qeEp8qCQNDiX7A513J3DKdrg7XPfVeQbD8wwTH9U-90jHV9COVUiR-XlMqehkJ2e5vRs4BA1jHECFpWDA";
-    String secret = "test";
+    String token = "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMzUxMjM1MTM0NTQxMyIsImlzcyI6IkRETSIsImV4cCI6MTcwNjgzNzI5OCwiaWF0IjoxNjA2ODM2Mzk4LCJ1c2VyX2lkIjo4MDAsInJvbGVzIjpbIkFETUlOIl0sInVzZXJfZmlyc3RfbmFtZSI6IkFkIiwidXNlcl9sYXN0X25hbWUiOiJNaW4iLCJ1c2VyX2VtYWlsIjoiYWRtaW5Ad2hhdGV2ZXIuY29tIn0.L_TdO2SKAuOyXkw1yNtonyL3LMH8M14peQ42sx15JxQKEC-mTAl6IlSA8ZUW-FkT_-9V01eW_rb9PtVhgmRyhQ";
+    String secret = "dGVzdA==";
 
     try {
       Jwt decodedToken = Jwts.parser( ).setSigningKey( secret ).parse( token );
@@ -51,4 +51,5 @@ class JWTTest {
       fail("Failed authentication: " + e.getMessage( ) );
     }
   }
+
 }
