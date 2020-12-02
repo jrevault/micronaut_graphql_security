@@ -55,6 +55,7 @@ dependencies {
     testAnnotationProcessor "io.micronaut:micronaut-inject-java"
     testImplementation platform("io.micronaut:micronaut-bom:2.1.0")
     testImplementation "org.junit.jupiter:junit-jupiter-api"
+    testImplementation "com.auth0:java-jwt:3.8.0"
     testImplementation "io.micronaut.test:micronaut-test-junit5"
     testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine"
 

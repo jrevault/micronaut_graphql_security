@@ -8,15 +8,9 @@ micronaut:
         signatures:
           secret:
             generator:
-              secret: "test"
-              base64: false
+              secret: 'dGVzdA=='
+#              secret: "test"
+              base64: true
               jws-algorithm: HS512
-#    intercept-url-map:
-#      - pattern: /ping
-#        access:
-#          - isAnonymous()
-#      - pattern: /secret
-#        access:
-#          - isAuthenticated()
 
 
