@@ -11,12 +11,12 @@ micronaut:
               secret: "test"
               base64: false
               jws-algorithm: HS512
-    intercept-url-map:
-      - pattern: /ping
-        access:
-          - isAnonymous()
-      - pattern: /secret
-        access:
-          - isAuthenticated()
+#    intercept-url-map:
+#      - pattern: /ping
+#        access:
+#          - isAnonymous()
+#      - pattern: /secret
+#        access:
+#          - isAuthenticated()
 
 
